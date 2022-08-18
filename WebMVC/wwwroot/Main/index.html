@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Search Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/btn.css">
+
+	<link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+
+	<video autoplay muted loop id="myVideo">
+		<source src="video/3.mp4" type="video/mp4">
+	</video>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section" style="color: white; margin: 5px;">Search Engine</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row mb-5">
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-map-marker"></span>
+			        		</div>
+			        		<div class="text">
+				            <p style="color: white;"><span style="color: white;">Address: </span>Tehran- Star Academy</p>
+				          	</div>
+			          	</div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-phone"></span>
+			        		</div>
+			        		<div class="text">
+				            <p style="color: white;"><span style="color: white;">Phone: </span>+ 012 3456 789</p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-paper-plane"></span>
+			        		</div>
+			        		<div class="text">
+				            <p style="color: white;"><span style="color: white;">Email: </span>info@yoursite.com</p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div class="icon d-flex align-items-center justify-content-center">
+			        			<span class="fa fa-globe"></span>
+			        		</div>
+			        		<div class="text">
+				            <p style="color: white;"><span style="color: white;">Website </span>yoursite.com</p>
+				          </div>
+			          </div>
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col-md-7">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Search With Our Engine</h3><br>
+									<div id="form-message-warning" class="mb-4"></div> 
+									<form action="/ChangePage/Query" id="queryForm">
+										<div class="row">
+
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="label" for="search">Write Your Phrase Here:</label>
+													<input type="text" class="form-control" name="query" id="search" placeholder="phrase" onkeyup="validate()" onclick="validate()" onfocusout="clean()">
+												</div>
+												<div id="searchError">
+
+												</div>
+											</div><br>
+
+											<div class="col-12">
+												<a class="boton" onclick="changePage123()">
+													Search 
+												</a>
+											</div>
+
+											<div class="col-12" id="searchHelp">
+
+											</div>
+
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);">
+			          		</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  	<script src="js/popper.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/btn.js"></script>
+	<script src="js/validation.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+﻿@model WebMVC.Controllers.ChangePageController;
+
+@{
+    Layout = null;
+    var myList = (List<string>) ViewBag.Query;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/ResultPage/ShowingSentence.css">
+    <link rel="stylesheet" href="~/ResultPage/navbar.css">
+</head>
+<body>
+    <video playsinline autoplay muted loop style="position:fixed;">
+
+        @if (myList.Count == 0)
+        {
+            <source src="~/ResultPage/Error.mp4" type="video/mp4"/>
+            myList.Add("No Doc Found");
+        }
+        else
+        {
+            <source src="~/ResultPage/BackSearch.mp4" type="video/mp4"/>
+        }
+
+
+    </video>
+
+
+<div>
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="~/ResultPage/SearchEngine.png">
+            </div>
+            <h2>
+                SearchEngine
+                <br>
+                <span>
+                    Navbar
+                </span>
+            </h2>
+        </div>
+        <ul class="navigation">
+            <li>
+                <a href="https://localhost:5001/Main/index.html">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    Back To Search Tab
+                </a>
+            </li>
+        </ul>
+        <div class="toggle">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
+<section id="mySec" class="sec">
+
+
+
+    @for (int i = 0; i < myList.Count; ++i)
+    {
+        <h6>@myList[i]</h6>
+    }
+
+    <div id="myDot" class="dot" onClick="change()">
+
+    </div>
+</section>
+
+
+
+<script>
+        const card = document.querySelector('.card');
+        const cardToggle = document.querySelector('.toggle');
+        cardToggle.onclick = function(){
+            card.classList.toggle('active');
+        }
+
+        function change() {
+            if (document.getElementById('myDot').classList.contains('active')){
+                document.getElementById('myDot').classList.remove('active');
+                document.getElementById('mySec').classList.remove('active');
+            }
+            else{
+                document.getElementById('myDot').classList.add('active');
+                document.getElementById('mySec').classList.add('active');
+            }
+        }
+
+        document.addEventListener('mousemove', function(e){
+            const dot = document.querySelector('.dot');
+        })
+</script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
